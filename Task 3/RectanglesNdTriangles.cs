@@ -12,9 +12,10 @@
 int UserChoice = 0;
 
 // Program Start Fluff
+Console.WriteLine("\tWelcome to Garden Space Calculator(tm)(Version 1)\n\tOption 1: Regular Yard\n\tOption 2: Irregular Yard\n\tOption 3: Exit");
 
 // Program Main Loop
-while (UserChoice != 9)
+while (UserChoice != 3)
 {
 // Error Handling
     try
@@ -25,7 +26,26 @@ while (UserChoice != 9)
         {
             case 1:
             {
-                
+                Console.WriteLine("\tPlease Enter the two Perpendicular lengths of your garden, these being;\n\tThe Depth, the distance from the back of your home to the far end of your garden and;\n\tThe Width, the distance from one side of the garden to the other, moving parallel to your home.");
+                Console.Write("\tDepth: ");
+                double d = Convert.ToDouble(Console.ReadLine());
+                Console.Write("\tWidth: ");
+                double w = Convert.ToDouble(Console.ReadLine());
+                MyRec UserRectangle = new MyRec(w,d);
+                Console.WriteLine("\n\tYour garden is " + UserRectangle.getRecDepth() + " units deep and, " + UserRectangle.getRecWidth() + " units wide.");
+                UserRectangle.getRecArea();
+                UserRectangle.getRecPerimeter();
+                UserRectangle.getSquareness();
+                break;
+            }
+            case 2:
+            {
+
+                break;
+            }
+            case 3:
+            {
+                Console.Write("\n\n\tPress any key to exit.");
                 break;
             }
             default:
@@ -47,3 +67,5 @@ while (UserChoice != 9)
         UserChoice = 0;
     }
 }
+//
+Console.ReadKey();
