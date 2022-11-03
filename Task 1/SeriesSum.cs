@@ -66,46 +66,56 @@ Console.WriteLine("\tOption 2: Input 5 values of your choice and see the Sum");
 Console.WriteLine("\tOption 3: Chose number of values to enter, then see the Sum");
 Console.WriteLine("\tOption 4: Declare a generic expression, its bounds,\n\tand see the Sum (CURRENTLY UNAVAILABLE)");
 Console.WriteLine("\tOption 5: Exit");
+
+// Main Program
 while(UserChoice != 5)
 {
+// Error Handling
     try
     {
-    Console.Write("\n\tPlease chose an Option: ");
-    switch(UserChoice = Convert.ToInt32(Console.ReadLine()))
-    {
-    case 1:
-    {
-        ExampleSeriesSum();
-        break;
+// Switch Statement for method calls or program exit
+        Console.Write("\n\tPlease chose an Option: ");
+        switch(UserChoice = Convert.ToInt32(Console.ReadLine()))
+        {
+        case 1:
+        {
+            ExampleSeriesSum();
+            break;
+        }
+        case 2:
+        {
+            UserCSeriesSum();
+            break;
+        }
+        case 3:
+        {
+            UserUSeriesSum();
+            break;
+        }
+        case 4:
+        {
+            Console.WriteLine("\tOption 4 is currently unavailable, please chose another option.");
+            break;
+        }
+        case 5:
+        {
+            Console.WriteLine("\n\tThank your for using Series Calculator Version 2.3, have a nice day!");
+            break;
+        }
+        default:
+        {
+            Console.WriteLine("\tInvalid input detected, please try again.");
+            break;
+        }
+        }
     }
-    case 2:
-    {
-        UserCSeriesSum();
-        break;
-    }
-    case 3:
-    {
-        UserUSeriesSum();
-        break;
-    }
-    case 4:
-    {
-        Console.WriteLine("\tOption 4 is currently unavailable, please chose another option.");
-        break;
-    }
-    case 5:
-    {
-        Console.WriteLine("\n\tThank your for using Series Calculator Version 2.3, have a nice day!");
-        break;
-    }
-    default:
-    {
-        Console.WriteLine("\tInvalid input detected, please try again.");
-        break;
-    }
-    }
-    }
+// When the user tries to break the program
     catch (FormatException)
+    {
+        Console.WriteLine("\n\tException Thrown. Please only enter numbers 0-9 (Zero through Nine)");
+        UserChoice = 0;
+    }
+    catch (OverflowException)
     {
         Console.WriteLine("\n\tException Thrown. Please only enter numbers 0-9 (Zero through Nine)");
         UserChoice = 0;
