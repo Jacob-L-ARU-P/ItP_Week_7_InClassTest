@@ -40,7 +40,7 @@ while (UserChoice != 3)
             }
             case 2:
             {
-
+                Console.WriteLine("Not Currently Implemented, no Doritos for you.");
                 break;
             }
             case 3:
