@@ -112,12 +112,12 @@ while(UserChoice != 5)
 // When the user tries to break the program
     catch (FormatException)
     {
-        Console.WriteLine("\n\tException Thrown. Please only enter numbers 0-9 (Zero through Nine)");
+        Console.WriteLine("\n\tException Thrown. Please only enter numbers using 0-9 (Zero to Nine) and '.' (full stops)");
         UserChoice = 0;
     }
     catch (OverflowException)
     {
-        Console.WriteLine("\n\tException Thrown. Please only enter numbers 0-9 (Zero through Nine)");
+        Console.WriteLine("\n\tException Thrown. Please only enter numbers using 0-9 (Zero to Nine) and '.' (full stops)");
         UserChoice = 0;
     }
 }
