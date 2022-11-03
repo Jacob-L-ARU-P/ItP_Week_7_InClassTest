@@ -20,8 +20,8 @@ float TestSeriesSum = 0;
 double[] UserSeriesC = new double[5];
 double UserSeriesCSum = 0;
 
-double[] UserSeriesU = new double[] {};
-double UserSeriesUSum = 0;
+// double[] UserSeriesU = new double[] {};
+// double UserSeriesUSum = 0;
 
 int UserChoice = 0;
 
