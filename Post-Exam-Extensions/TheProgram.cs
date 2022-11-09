@@ -9,3 +9,9 @@
 // Code by Jacob Lummis
 // ARUP SID: 2213276
 // ---------------------
+
+Test MyTest = new Test();
+Console.WriteLine("\n\tHello World!\n");
+MyTest.ESS2();
+Console.WriteLine("\nPress any key to exit");
+Console.ReadKey();
